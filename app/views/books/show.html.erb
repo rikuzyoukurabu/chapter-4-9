@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+<p class = "success"><%= flash[:notice] %></p>
+<% end %>
+<!--もし成功したら上記のnoticeが表紙される-->
+<!--CSSは後でやる-->
+
+
+  <p><strong>Title: </strong><%= @book.title %></p>
+
+  <p><strong>body: </strong><%= @book.body %></p><br>
+
+  <%= link_to "Edit",edit_book_path(@book.id) %>
+  <%= link_to "Back", "/books" %>
+  <!--これで戻るリンク追加-->
+
